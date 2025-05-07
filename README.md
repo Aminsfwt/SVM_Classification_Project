@@ -7,8 +7,7 @@ The code is implemented in Python using popular libraries such as scikit-learn, 
 ## Repository Structure
 
 ```
-Applied ML/
-└── Heart Disease Prediction/
+Heart Disease Prediction/
         ├── heart.csv                   # Dataset file
         ├── main_svm.py                 # Main script for SVM training and evaluation
         └── PrepData.py                 # Utility functions for data reading and preprocessing
