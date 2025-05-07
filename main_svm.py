@@ -1,8 +1,8 @@
-#import helping function file
+#import the helping function file
 from PrepData import *
 
 
-path = 'E:\ML\Intro to Deep Learning\Labs\Codes\Applied ML\Linear Model For Classification\Heart Disease Prediction\heart.csv'
+path = 'heart.csv'
 X, y = read_data(path, 'num', 'id')
 
 #split the data into train and test sets
@@ -31,13 +31,13 @@ svm_model.fit(X_train_scaled, y_train)
 #Make predictions on the test set
 y_pred = svm_model.predict(X_test_scaled)
 
-# Print first 5 rows of predictions and actual values
+# Print the first 5 rows of predictions and actual values
 print("First 5 predictions:")
 print("Y PRED = \n", y_pred[:20])
 print("\nFirst 5 actual values:")
 print("Y TEST = \n", y_test[:20].values)
 
-# Print accuracy score
+# Print the accuracy score
 svm_accuracy = accuracy_score(y_test, y_pred)
 print(f"\nSVM Model Accuracy: {svm_accuracy:.2f}")
 
@@ -81,11 +81,11 @@ grid_search.fit(X_train_scaled, y_train)
 best_params = grid_search.best_params_
 print(f"\nBest Parameters: {best_params}")
 
-# the best model found during grid search
+# The best model found during grid search
 best_svm_model = grid_search.best_estimator_
 print(f"\nBest SVM Model: {best_svm_model}")
 
-#evaluate the best model on the test set
+# Evaluate the best model on the test set
 y_pred_best = best_svm_model.predict(X_test_scaled)
 print('\nBest SVM Model Accuracy: \n', accuracy_score(y_test, y_pred_best))
 
