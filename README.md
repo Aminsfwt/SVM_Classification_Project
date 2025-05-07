@@ -8,8 +8,7 @@ The code is implemented in Python using popular libraries such as scikit-learn, 
 
 ```
 Applied ML/
-└── Linear Model For Classification/
-    └── Heart Disease Prediction/
+└── Heart Disease Prediction/
         ├── heart.csv                   # Dataset file
         ├── main_svm.py                 # Main script for SVM training and evaluation
         └── PrepData.py                 # Utility functions for data reading and preprocessing
@@ -27,7 +26,7 @@ Applied ML/
   A linear SVM model (`LinearSVC`) is trained; predictions and model accuracy are printed. A confusion matrix is also generated for model evaluation.
 
 - **Hyperparameter Tuning:**  
-  `GridSearchCV` is used with `SVC` to search for the best hyperparameters based on accuracy. For linear kernels, the project also displays feature importance based on the model coefficients.
+  `GridSearchCV` is used with `SVC` to search for the best hyperparameters based on accuracy. The project also displays feature importance for linear kernels based on the model coefficients.
 
 ## Requirements
 
